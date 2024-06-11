@@ -1,0 +1,350 @@
+:root {
+  font-family: Outfit;
+  font-size: 15px;
+  font-weight: 500;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.686);
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(90, 65, 112);
+}
+a {
+  text-decoration: none;
+}
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("Images/purpleanime.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  filter: blur(14px);
+  transform: scale(1.1, 1.1);
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  height: 15vh;
+  width: 100vw;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+}
+.header .brand {
+  word-spacing: 0.2vw;
+  letter-spacing: 0.2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  margin-left: 5vw;
+}
+.logo {
+  margin: 1vh;
+  font-size: 2vw;
+  font-weight: 1000;
+  background: -webkit-linear-gradient(left, #00fffb, #f3fd1c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 80vh;
+  z-index: 1;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 85%;
+  border-radius: 3vw;
+  background: white;
+}
+.container .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5vh;
+  align-items: center;
+  background: url("Images/purplesneaker.webp");
+  background-position: center;
+  background-size: cover;
+  border-radius: 3vw 0 0 3vw;
+}
+.left h1 {
+  text-align: center;
+  color: white;
+  font-size: 3vw;
+  letter-spacing: 0.5vw;
+  font-weight: 1000;
+}
+.left .signup {
+  margin-bottom: 10vh;
+  position: relative;
+  height: 9vh;
+  width: 15vw;
+  z-index: 1;
+  background: white;
+  color: black;
+  font-size: 1.6vw;
+  font-weight: 800 !important;
+  letter-spacing: 0.1vw;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  border-radius: 3vw;
+  transition: 0.25s all;
+  padding: 0;
+}
+.left .signup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  outline: none;
+  border-radius: 3vw;
+  background: black;
+  transition: 0.25s all;
+}
+.signup:hover {
+  color: white;
+}
+.signup:hover::before {
+  width: 100%;
+}
+.container .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 0 3vw 3vw 0;
+}
+.right h1 {
+  font-size: 3vw;
+  letter-spacing: 0.2vw;
+  font-weight: 800;
+  margin-top: 8vh;
+  margin-bottom: 0;
+}
+.right h2 {
+  font-size: 1.2vw;
+  letter-spacing: 0.1vw;
+  font-weight: 1000;
+}
+.sign {
+  margin-top: 2vh;
+  margin-bottom: 0;
+  width: 25vw;
+}
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.box input {
+  width: 100%;
+  padding: 0.8vh 0;
+  margin-bottom: 4vh;
+  border: none;
+  border-bottom: 0.3vh solid black;
+  outline: none;
+  font-weight: 700;
+  font-size: 1.2vw;
+  background: transparent;
+}
+.box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 700;
+  font-size: 1.1vw;
+  transition: 0.3s all;
+}
+.box input:valid ~ label,
+.box input:focus ~ label {
+  top: -2vh !important;
+  font-size: 0.9vw;
+}
+.right .signin {
+  margin-bottom: 5vh;
+  position: relative;
+  height: 7vh;
+  width: 10vw;
+  z-index: 1;
+  background: #77b60d;
+  color: white;
+  font-size: 1.2vw;
+  font-weight: 800 !important;
+  letter-spacing: 0.1vw;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  border-radius: 3vw;
+  transition: 0.25s all;
+  padding: 0;
+}
+.right .signin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  outline: none;
+  border-radius: 3vw;
+  background: #3e5c0c;
+  transition: 0.25s all;
+}
+.signin:hover::before {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    font-size: 3vw;
+  }
+  .box label {
+    font-size: 1.5vw;
+  }
+  .box input:valid ~ label,
+  .box input:focus ~ label {
+    top: -2vh !important;
+    font-size: 1.2vw;
+  }
+  .box input {
+    font-size: 1.8vw;
+  }
+  .right h1 {
+    margin-top: 5vh;
+    font-size: 3.5vw;
+  }
+  .right h2 {
+    font-size: 1.4vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box label {
+    font-size: 2vw;
+  }
+  .box input:valid ~ label,
+  .box input:focus ~ label {
+    font-size: 1.5vw;
+  }
+  .box input {
+    font-size: 2vw;
+  }
+  .right h1 {
+    margin-top: 4vh;
+    font-size: 4vw;
+  }
+  .right h2 {
+    font-size: 2vw;
+  }
+  .right .signin {
+    margin-bottom: 3vh;
+    position: relative;
+    height: 6vh;
+    width: 11vw;
+    border-radius: 2vw;
+    font-size: 1.5vw;
+  }
+  .right .signin::before {
+    border-radius: 2vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .logo {
+    font-size: 4vw;
+  }
+  .container {
+    width: 90%;
+  }
+  .sign {
+    width: 35vw;
+  }
+  .box label {
+    font-size: 2.5vw;
+  }
+  .box input:valid ~ label,
+  .box input:focus ~ label {
+    font-size: 1.8vw;
+  }
+  .box input {
+    width: 35vw;
+    font-size: 2.5vw;
+  }
+  .right h1 {
+    margin-top: 4vh;
+    font-size: 4.5vw;
+  }
+  .right h2 {
+    font-size: 2.7vw;
+  }
+  .right .signin {
+    margin-bottom: 2vh;
+    position: relative;
+    height: 6vh;
+    width: 15vw;
+    border-radius: 2vw;
+    font-size: 2vw;
+  }
+  .left h1 {
+    font-size: 4vw;
+    letter-spacing: 0.8vw;
+  }
+  .left .signup {
+    height: 7vh;
+    width: 20vw;
+    font-size: 2.5vw;
+    margin-bottom: 7vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .box input:valid ~ label,
+  .box input:focus ~ label {
+    font-size: 2vw;
+  }
+  .box input {
+    font-size: 3vw;
+  }
+}
